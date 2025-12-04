@@ -1,0 +1,217 @@
+body {
+    background-color: #ffffff;
+
+}
+
+.card {
+    margin: 0 auto;
+    display: flex; /* Rugalmas elrendezés */
+    flex-direction: column; /* A tartalom függőlegesen rendeződik */
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+    width: clamp(250px, 10vw, 550px);
+    max-height: calc(100vh - 60px); /* A teljes képernyő magasság minusz a navbar */
+    overflow: hidden; /* Elkerüli a túlcsordulást */
+    margin:10px;
+}
+.card-img-top {
+    display: block; /* Blokk elemként kezeljük */
+    margin: 0 auto;
+    width: 80%; 
+    height: 150px; /* Automatikusan igazodik */
+    max-height: 30%; /* Az arányos megjelenítéshez */
+    object-fit: contain; /* Megőrzi a teljes kép */
+    object-position: center; /* Középre igazítja a képet */
+}
+.card-body {
+    flex-grow: 1; /* A tartalom kitölti a rendelkezésre álló helyet */
+    overflow: hidden; /* Görgethető, ha szükséges */
+}
+.card-header {
+    color: rgb(217, 243, 240);    
+}
+.card-img-bottom {
+    max-height: 40vh;
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.card-title {
+    font-size: 1.2em; /* A kártya betűméretének 1.2-szerese */
+    color: #3c4664;
+    font-weight: bold;
+    text-align: center;
+    font-size: clamp(18px, 2vw, 24px); /* A kártya betűmérete igazodik a szélességhez */
+}
+.card-text {
+    text-align: center;
+    font-size: clamp(11px, 1.5vw, 16px); /* A kártya betűmérete igazodik a szélességhez */
+}
+
+.card-footer{
+    text-align: center;
+    text-decoration: none;
+}
+h4 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2vw;
+    color: #4B0082;
+    font-weight: bold;
+    font-style: normal; 
+    margin-bottom: 5px;
+ }
+ h2 {
+    font-family: 'Times New Roman', Times, serif;
+    color: #4B0082;
+    font-weight: bold;
+    margin-top: 60px;
+ }
+
+button {
+    background-color: #3c4664;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: #E6E6FA;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: clamp(12px, 1.2vw, 24px);
+}
+button:hover{
+    text-decoration: none;
+}
+
+.szoveg1 {
+    flex: 1;
+    text-align: center;
+    color: #4B0082;
+    font-size: clamp(18px, 5vw, 60px);/* Min: 24px, Dinamikus: 3vw, Max: 60px */
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif;
+    padding-right: 10px;
+}
+.szoveg2 {
+    flex: 1;
+    text-align: center;
+    color: #4B0082;
+    font-size: clamp(12px, 3vw, 24px);/* Min: 24px, Dinamikus: 3vw, Max: 60px */
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif;
+    padding-right: 10px;
+}
+header h1 {
+    text-align: right;
+    color: #4B0082;
+}
+.content {
+    display: flex;
+    /*justify-content: center;*/
+    margin-top: 20px;
+}
+.pdf-container {
+    width: 100vw;
+    height: calc(100vh - 50px);
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+}
+.pdf-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.iframe-wrapper {
+    background-color: #F3F7FA; /* Halvány lila háttér */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+iframe {
+    width: 100%;
+    height: calc(100vh - 50px);
+    border: none;
+    background-color: #F3F7FA;
+}
+.footer-text {
+    font-size: 14px;
+}
+footer {
+    padding: 20px; 
+    height: auto;
+    position: relative;
+    bottom: auto;
+    width: 100%;
+    grid-template-columns: 1fr;
+    color: black;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    font-family: 'Times New Roman', Times, serif;
+}
+/*
+.container-footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #4B0082;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+*/
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex-grow: 1; /* A tartalom kitölti a rendelkezésre álló helyet */
+}
+
+.contkap {
+    display: flex;
+    justify-content: center; /* Vízszintesen középre */
+    align-items: center; /* Függőlegesen középre */
+    height: 100vh; /* Teljes magasság */
+    
+}
+
+.kapcsolat {
+    background-color: #d7bdea;
+    width: 100%;
+    padding: 20px 0;
+    color: #4B0082;
+    font-size: clamp(14px, 1.5vw, 24px);
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    border: 2px solid #4B0082;
+    border-radius: 15px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+/* Reszponzív beállítások
+ Mobilnézetben egymás alá kerülnek */
+
+ @media (max-width: 450px) {
+    .card {
+        width: 100%; /* Teljes szélesség */
+        margin-bottom: 10px;
+    }
+    .container-body {
+        flex-direction: column; /* Mobilon egymás alá kerülnek */
+        align-items: center;
+        grid-template-columns: 1fr; /* Egy oszlop lesz kisebb kijelzőn */
+    }
+}
+@media (max-width: 768px) {
+    .kapcsolat {
+        position: relative;
+        bottom: auto;
+    }
+}
+

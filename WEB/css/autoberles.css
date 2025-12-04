@@ -1,0 +1,90 @@
+body {
+    font-family: "Times New Roman", sans-serif;
+    font-size: 18px;
+    padding-top: 50px; 
+    color:#000000;
+    background-color: #ffffff;   
+    margin: 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Times New Roman", sans-serif;
+    color: #3c4664;
+    font-weight: bold;
+}
+
+.fejlec {
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+} 
+.container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+}
+.container-body {
+    height: calc(100vh - 60px); 
+    display: grid;
+    grid-template-columns: 3fr 9fr; 
+    gap: 5px; 
+    padding-top: 10px;
+}
+
+.display-4 {
+  color:black;
+}
+
+.navbar {
+    background-color: #ae415b;    
+}
+
+.navbar .nav-link {
+    color: white;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar .nav-link:hover {
+    color: #a1cbf8;
+}
+
+.navbar-brand {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+.navbar-brand:hover {
+    color: #ffffff;
+}
+
+.navbar-toggler {
+    
+    border: none !important;
+    
+}
+
+.navbar-toggler:hover {
+   
+    border: none !important;
+}
+
+.justify {
+    text-align: left;
+  }
+.noborder{
+    border: none !important;
+}
+
+.flex-k{
+    display: flex;
+    background-size: cover;
+}
+
+footer {
+    text-align: center;  
+}
+.card{
+    background-color: #ffffff;
+}

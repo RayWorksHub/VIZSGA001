@@ -1,0 +1,61 @@
+﻿<!doctype html>
+<html lang="hu">
+
+<head>
+    <!-- Szükséges meta elemek -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
+                rel="stylesheet">
+    <title></title>
+    <!-- Kezdőállapothoz tartozó css -->
+
+    <link rel="stylesheet" href="assets/premade.min.css">
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+
+<body>
+    <section class="container">
+        <div class="body-jel">
+            <h1 class="cimsor-jel">AUTÓ - BÉRLÉS</h1>
+                <label style="font-weight: bold; text-align:center;">
+                    Autó bérlési igény bejelentése! - két órán belül visszahívjuk!<br>
+                    SÜRGŐS megjelölés esetén Munkatársunk azonnal visszahívja Önt a megadott telefonszámon!
+                </label><br>
+                <div class="top-row px-4">
+                    <h1 class="text-primary text-center mt-3">Új igénybejelentő</h1>
+                </div>
+                
+            <EditForm Model="ujIgeny" OnValidSubmit="ElkuldIgeny">
+                <DataAnnotationsValidator />
+                <ValidationSummary class="text-danger" />
+                <div class="mb-3 gf-keret">
+                    <label for="autoId" class="gf-label">Bérelhető autók:</label>
+                    <select class="gform-select" id="autoId">
+                        <option value="0">Kérem válasszon...</option>
+                        
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="igeny-name">Bérlő neve</label>
+                    <input type="text" id="igeny-name" @bind=ujIgeny.Nev required><br>
+                </div>
+
+                <div>
+                    <label>
+                        Elolvastam és elfogadom a bérlési feltételeket.
+                        <input type="checkbox" id="privacy" name="privacy" required>
+                    </label><br>
+                </div>
+                
+            </EditForm>
+
+            <!--</form>-->
+        </div>
+    </section>
+</body>
+</html>
